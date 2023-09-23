@@ -211,15 +211,22 @@ module.exports.login = async function login(req, res) {
 // middleware to check if user is logged in
 
 module.exports.isLoggedIn = async function (req, res) {
-  return async (req, res) => {
-    console.log("djfj");
-    const token = req.cookies.token;
-    if (token) {
-      res.json({ isLoggedIn: true });
-    } else {
-      res.json({ isLoggedIn: false });
-    }
-  };
+  // return async (req, res) => {
+  //   console.log("djfj");
+  //   const token = req.cookies.token;
+  //   if (token) {
+  //     res.json({ isLoggedIn: true });
+  //   } else {
+  //     res.json({ isLoggedIn: false });
+  //   }
+  // };
+
+  const token = req.cookies.token;
+  if (token) {
+    res.json({ isLoggedIn: true });
+  } else {
+    res.json({ isLoggedIn: false });
+  }
 };
 
 module.exports.logout = async function (req, res) {
