@@ -57,7 +57,7 @@ const Profile = () => {
             <>
                 <div className="profile-comtainer">
                     <Avatar
-                        size="large"
+                        size={100}
                         icon={<UserOutlined />}
                     />
 
