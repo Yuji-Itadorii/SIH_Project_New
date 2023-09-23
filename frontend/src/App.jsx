@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import RecommendComponent from './components/RecommendComponent/RecommendComponent'
 import Login from "./components/Login/Loginform"
+import LoginFormNew from "./components/Login/LoginFormNew"
 import SignUp from './components/SignUp/Signup';
 import Profile from './components/Profile/Profile'
 import { UserOutlined } from '@ant-design/icons';
@@ -76,7 +77,7 @@ function App() {
           <Routes>
             <Route path="/" element={<ContentComponent />} />
             <Route path="/recommend_page" element={<RecommendComponent />} />
-            <Route path='/login' element={<Login />} />
+            <Route path='/login' element={<LoginFormNew />} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/profile' element={<Profile />} />
           </Routes>
