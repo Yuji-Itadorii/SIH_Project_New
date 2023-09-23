@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import "./LoginFormNew.css"
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -20,13 +20,13 @@ const LoginFormNew = () => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
+                credentials: 'include',
                 body: JSON.stringify({ email, password }),
-                credentials: 'include'
             })
             const data = await res.json()
             if (res.status === 200) {
                 window.alert(data.message)
-                navigate('/')
+                navigate('/profile')
             } else {
                 window.alert('Some error occured')
             }

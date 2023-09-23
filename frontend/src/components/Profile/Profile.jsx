@@ -60,6 +60,7 @@ const Profile = () => {
                     <Avatar
                         size={100}
                         icon={<UserOutlined />}
+                        src="https://api.dicebear.com/7.x/bottts/svg?seed=abhay"
                     />
 
                     {user ? <Space direction="vertical">

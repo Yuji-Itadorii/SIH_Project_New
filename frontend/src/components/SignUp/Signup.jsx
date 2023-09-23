@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './Signup.css';
+import { useNavigate } from 'react-router-dom';
 
 const SigninForm = () => {
   const [email, setEmail] = useState('');
@@ -10,6 +12,7 @@ const SigninForm = () => {
   const [interests, setInterests] = useState('');
   const [education, setEducation] = useState('');
   const [institution, setInstitution] = useState('');
+  const navigate = useNavigate();
 
   const handleFnameChange = (e) => setFname(e.target.value);
   const handleLnameChange = (e) => setLname(e.target.value);
@@ -45,6 +48,7 @@ const SigninForm = () => {
       const data = await res.json();
       if (res.status === 200) {
         window.alert(data.message);
+        navigate('/profile');
       } else {
         window.alert('Some error occurred');
       }
@@ -54,7 +58,7 @@ const SigninForm = () => {
   };
 
   return (
-    <div>
+    <div className='signup-form-div'>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="fname">First Name:</label>

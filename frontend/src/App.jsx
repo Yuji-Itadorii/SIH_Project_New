@@ -20,6 +20,7 @@ import UpdateCourses from './components/UpdateCourses/UpdateCourses'
 import CourseCard from './components/Cards/CourseCard'
 import OneCourseComponent from './components/OneCourseComponent/OneCourseComponent'
 import AddReviews from './components/AddReviews/AddReviews'
+import LoginForm from './components/Login/Loginform'
 
 const headerStyle = {
   textAlign: 'center',
@@ -89,7 +90,7 @@ function App() {
               </div>
 
               <Link to="/profile">
-                <Avatar icon={<UserOutlined />} />
+                <Avatar src="https://api.dicebear.com/7.x/bottts/svg?seed=abhay" />
               </Link>
             </Space>
 
