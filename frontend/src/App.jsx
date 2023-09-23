@@ -13,6 +13,12 @@ import Login from "./components/Login/Loginform"
 import SignUp from './components/SignUp/Signup';
 import Profile from './components/Profile/Profile'
 import { UserOutlined } from '@ant-design/icons';
+import AddCoursesComponent from './components/AddCoursesComponent/AddCoursesComponent'
+import AllCoursesComponent from './components/AllCoursesComponent/AllCoursesComponent'
+import UpdateCourses from './components/UpdateCourses/UpdateCourses'
+import CourseCard from './components/Cards/CourseCard'
+import OneCourseComponent from './components/OneCourseComponent/OneCourseComponent'
+import AddReviews from './components/AddReviews/AddReviews'
 
 const headerStyle = {
   textAlign: 'center',
@@ -94,6 +100,11 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/profile' element={<Profile />} />
+            <Route path='/addCourses' element={<AddCoursesComponent />} />
+            <Route path='/all_courses' element={<AllCoursesComponent />} />
+            <Route path='/updatecourses/:id' element={<UpdateCourses />} />
+            <Route path='/course/:id' element={<OneCourseComponent />} />
+            <Route path='/review/:id' element={<AddReviews />} />
           </Routes>
           <Footer>
             <Typography.Title level={5} style={{ textAlign: 'center' }}>Made with ❤️ by

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './Profile.css';
-import { Avatar, Space, Spin } from 'antd';
+import { Avatar, Button, Space, Spin } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
+import Link from 'antd/es/typography/Link';
 
 const Profile = () => {
     const [loading, setLoading] = useState(true)
@@ -69,6 +70,9 @@ const Profile = () => {
                         {/* <h2></h2> */}
                         {/* <h2>Education</h2> */}
                         {/* <h2>Instution</h2> */}
+                        {user.role === "teacher" || user.role === "admin" ? <Button  >
+                            <Link href="/addCourses">Add Courses</Link>
+                        </Button> : null}
                     </Space> : <h1>loading....</h1>}
                 </div>
             </>
