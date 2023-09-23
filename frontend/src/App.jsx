@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Avatar, Layout, Space } from 'antd'
+import { Avatar, Button, Layout, Space } from 'antd'
 import { Footer, Header } from 'antd/es/layout/layout'
 import Card from './components/Cards/CourseCard'
 import Typography from 'antd/es/typography/Typography'
@@ -19,6 +19,7 @@ const headerStyle = {
   color: '#fff',
   paddingInline: 50,
   lineHeight: '64px',
+  marginBottom: "1rem",
   backgroundColor: '#7dbcea',
 };
 
@@ -26,13 +27,18 @@ const items = [
   {
     label: <Link to="/">Home</Link>,
     key: '1',
-    // icon: < DashOutlined />,
   },
   {
     label: <Link to="/recommend_page">Recommend Courses</Link>,
     key: '2',
-    // icon: < DashOutlined />,
   },
+];
+
+const items2 = [
+  {
+    label: <Link to="/login">Login</Link>,
+    key: '3',
+  }
 ];
 
 
@@ -65,7 +71,16 @@ function App() {
               width: '100%',
               justifyContent: 'space-between'
             }}>
-              <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
+
+              <div className='menu-container' >
+
+                <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" forceSubMenuRender={true} items={items} />
+
+                <Button style={{ marginLeft: '1rem', height: '3rem', backgroundColor: 'white' }} >
+                  <Link to="/login">Login</Link>
+                </Button>
+              </div>
+
               <Link to="/profile">
                 <Avatar icon={<UserOutlined />} />
               </Link>
